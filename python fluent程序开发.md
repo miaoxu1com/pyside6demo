@@ -33,7 +33,8 @@ pyuic
 ### pyqt程序Nuitka打包
 
 1.首先下载nuitkaui Toolkit打包程序
-
+nuitkaui Toolkit是nuitka的gui工具，还是要python环境依赖nuitkaui，虚拟环境中需要安装nuitkaui才行，才能使用nuitkaui Toolkit打包
+uv会创建exe文件的shim就是会自动把exe加入到环境变量类似pipx把exe变成全局工具，uv=pipx+pip
 python安装nuitka包
 
 ```powershell
@@ -45,6 +46,7 @@ nuitkaui依赖程序下载，nuitkaui需要winlibs_mingw进行编译，而且需
 [下载](https://hub.whtrys.space/brechtsanders/winlibs_mingw/releases/download/13.2.0-16.0.6-11.0.1-msvcrt-r1/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-16.0.6-mingw-w64msvcrt-11.0.1-r1.zip)
 
 winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64msvcrt-11.0.1-r1.zip版本下载放到指定目录即可
+指定目录位置是C:\Users\用户名\AppData\Local\Nuitka\Nuitka\Cache\downloads\gcc\x86_64  而且要精确版本号  
 
 2.ccache安装
 
