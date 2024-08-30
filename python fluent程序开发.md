@@ -40,7 +40,7 @@ python安装nuitka包
 ```powershell
 uv pip install nuitka
 ```
-
+nuitka也会打包python3.dll ，pyinstaller也会打包
 nuitkaui依赖程序下载，nuitkaui需要winlibs_mingw进行编译，而且需要安装提示的指定的版本，而且必须是zip的压缩包，放到指定的目录，程序会自动解压缩
 
 [下载](https://hub.whtrys.space/brechtsanders/winlibs_mingw/releases/download/13.2.0-16.0.6-11.0.1-msvcrt-r1/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-16.0.6-mingw-w64msvcrt-11.0.1-r1.zip)
