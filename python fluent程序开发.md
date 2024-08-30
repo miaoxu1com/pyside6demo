@@ -63,3 +63,5 @@ winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64msvcrt-11.0.1-r1.zip版本下载放
 1. Nuitka打包程序不要放在中文目录中否则打包会报错
 2. 系统关联的解压程序不要放在中文目录中，nuitkaui调用解压程序会报错
 3. pycharm git提交时忽略文件不是.idea 是放在git中的忽略文件
+4. Nuitka打包容易被杀毒软件拦截，需要添加白名单信任
+5. Nuitka打包的程序运行时也被杀毒软件拦截也需要添加信任
