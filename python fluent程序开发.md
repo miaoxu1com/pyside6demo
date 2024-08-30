@@ -45,6 +45,10 @@ nuitkaui依赖程序下载，nuitkaui需要winlibs_mingw进行编译，而且需
 
 [下载](https://hub.whtrys.space/brechtsanders/winlibs_mingw/releases/download/13.2.0-16.0.6-11.0.1-msvcrt-r1/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-16.0.6-mingw-w64msvcrt-11.0.1-r1.zip)
 
+命令行打包
+python.exe -m nuitka --output-filename=main --onefile --onefile-tempdir-spec=./main_cache --standalone --windows-disable-console --remove-output --no-pyi-file 
+--mingw64 --assume-yes-for-downloads --output-dir=nuitka_output --enable-plugin=pyqt5 --windows-icon-from-ico=main.ico --include-module=pywin32_bootstrap main.py
+
 winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64msvcrt-11.0.1-r1.zip版本下载放到指定目录即可
 指定目录位置是C:\Users\用户名\AppData\Local\Nuitka\Nuitka\Cache\downloads\gcc\x86_64  而且要精确版本号  
 https://blog.csdn.net/qq_17328759/article/details/120230311
