@@ -8,44 +8,80 @@ from qfluentwidgets import setThemeColor
 from untitled import Ui_Form
 
 
-class myApp(FramelessWindow, Ui_Form):
-    def __init__(self):
+class myApp(
+    FramelessWindow,
+    Ui_Form
+):
+    def __init__(
+        self
+    ):
         super().__init__()
-        self.setupUi(self)
+        self.setupUi(
+            self
+        )
         # 设置标题栏
-        self.setTitleBar(StandardTitleBar(self))
-        setThemeColor('#28afe9')
+        self.setTitleBar(
+            StandardTitleBar(
+                self
+            )
+        )
+        setThemeColor(
+            '#28afe9'
+        )
         self.titleBar.raise_()
-        self.PrimaryPushButton.clicked.connect(self.openFile)
+        self.PrimaryPushButton.clicked.connect(
+            self.openFile
+        )
         # self.label.setscaledcontents(False)
         # self.setWindowIcon(QIcon(":/images/logo.png"))
         # self.setWindowTitle("PyQt-Fluent-Widgets")
-        self.resize(600, 100)
-        self.setFixedSize(600, 100)
+        self.resize(
+            600,
+            100
+        )
+        self.setFixedSize(
+            600,
+            100
+        )
         # 窗口居中
         rect = QApplication.primaryScreen().availableGeometry()
         w, h = rect.width(), rect.height()
-        self.move(w // 2 - self.width() // 2, h // 2 - self.height() // 2)
-        self.titleBar.titleLabel.setStyleSheet("""
-                    QLabel{
-                        background: transparent;
-                        font: 13px 'Segoe UI';
-                        padding: 0 4px;
-                        color: white;
-                    }
-                """)
+        self.move(
+            w // 2 - self.width() // 2,
+            h // 2 - self.height() // 2
+        )
+        self.titleBar.titleLabel.setStyleSheet(
+            """
+                                QLabel{
+                                    background: transparent;
+                                    font: 13px 'Segoe UI';
+                                    padding: 0 4px;
+                                    color: white;
+                                }
+                            """
+        )
 
-    def openFile(self):
-        res = QFileDialog.getOpenFileName(self)
-        self.LineEdit.setText(res[0])
+    def openFile(
+        self
+    ):
+        res = QFileDialog.getOpenFileName(
+            self
+        )
+        self.LineEdit.setText(
+            res[0]
+        )
 
 
 if __name__ == '__main__':
     # enable dpi scale
-    QApplication.setHighDpiScaleFactorRoundingPolicy(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
+    QApplication.setHighDpiScaleFactorRoundingPolicy(
+        Qt.HighDpiScaleFactorRoundingPolicy.PassThrough
+    )
     # QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
     # QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
-    app = QApplication(sys.argv)
+    app = QApplication(
+        sys.argv
+    )
     w = myApp()
     w.show()
     app.exec()
